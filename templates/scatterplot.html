@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Scatterplot
+{% endblock %}
+
+{% block main %}
+
+<body class="align-center">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <p></p>
+    <p></p>
+    <p></p>
+    <canvas id="scatterChart" width="900" height="400" ></canvas>
+    <script>
+
+        // Dane do wykresu
+    var temperatures = {{ temp_value | safe }};
+    var humidities = {{ hum_value | safe }};
+
+    // Pobierz element canvas
+    var ctx = document.getElementById('scatterChart').getContext('2d');
+
+    // Utwórz dane dla scatterplota
+    var data = {
+      datasets: [{
+        label: 'Temperature vs Humidity',
+        data: temperatures.map((value, index) => ({ x: value, y: humidities[index] })),
+        backgroundColor: 'rgb(243,183,46)', // Kolor punktów
+        borderColor: 'rgb(59,71,199)', // Kolor obramowania punktów
+      }]
+    };
+
+    // Konfiguracja opcji wykresu
+    var options = {
+      responsive: false,
+      maintainAspectRatio: false,
+      scales: {
+        x: {
+          type: 'linear',
+          position: 'bottom',
+          title: {
+            display: true,
+            text: 'Temperature [°C]'
+          }
+        },
+        y: {
+          type: 'linear',
+          position: 'left',
+          title: {
+            display: true,
+            text: 'Humidity [%]'
+          }
+        }
+      }
+    };
+
+    // Utwórz scatterplot
+    var scatterChart = new Chart(ctx, {
+      type: 'scatter',
+      data: data,
+      options: options
+    });
+
+
+    </script>
+
+</body>
+
+
+{% endblock %}

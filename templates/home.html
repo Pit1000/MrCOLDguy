@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+
+<body>
+
+    {% if olddate %}
+
+        <div class="temperature-container-old">
+        <p>The last measurement is from:</p>
+        <h1 id="data expired: ">{{ olddate }}</h1>
+        <p> ago!</p>
+        </div>
+
+    {% endif %}
+
+{% for sensor_name in sensor_names %}
+    <p></p>
+    <div class="temperature-container">
+      <div class="tile-title"> {{ sensor_name[2] }} </div>
+          <div class="tile-divider"></div>
+      <p></p>
+        <h3 class="tile-val">Temperature:</h3>
+        <h2 id="temperature">{{ sensor_name[3] }}℃</h2>
+          <h3 class="tile-val">Humidity:</h3>
+        <h2 id="Humidity">{{ sensor_name[4] }}%</h2>
+     </div>
+    <p></p>
+
+{% endfor%}
+
+</body>
+
+{% endblock %}
+
+

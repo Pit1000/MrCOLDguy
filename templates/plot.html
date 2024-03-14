@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Plot
+{% endblock %}
+
+{% block main %}
+
+<body class="align-center">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <p></p>
+    <p></p>
+    <p></p>
+    <canvas id="lineChart" width="900" height="400" ></canvas>
+    <script>
+
+        var ctx = document.getElementById("lineChart").getContext("2d");
+        var lineChart = new Chart(ctx, {
+            type: "line",
+            data: {
+                labels: {{ temp_data | safe }},
+                datasets:   [
+                    {
+                        label: "Temperature [℃]",
+                        data: {{ temp_value | safe }},
+                        fill: true,
+                        borderColor: "rgb(184,192,75)",
+                        lineTension: 0.1
+                    },
+
+                    {
+                        label: "Humidity [%]",
+                        data: {{ hum_value | safe }},
+                        fill: true,
+                        borderColor: "rgb(75,85,192)",
+                        lineTension: 0.1
+                    }
+                ]
+
+            },
+            options: {
+                responsive: false
+
+            }
+
+        });
+
+    </script>
+
+
+
+
+</body>
+
+
+{% endblock %}

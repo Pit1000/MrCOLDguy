@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Temperature history
+{% endblock %}
+
+{% block main %}
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+
+    <script>
+    $(document).ready(function() {
+        $('#myTable').DataTable();
+    });
+</script>
+
+<main class="container py-5 text-center">
+
+    <table id="myTable" class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th class="text-start">Timestemp</th>
+                <th class="text-end">Temperature</th>
+                <th class="text-end">Humidity</th>
+                <th class="text-end">Sensor Name</th>
+                <th class="text-end">Sensor Type</th>
+            </tr>
+        </thead>
+       <tbody>
+
+                {% for port in portfolio %}
+
+
+                <tr>
+                    <td class="text-start">{{ port[5] }}</td>
+                    <td class="text-end">{{ port[3] }}</td>
+                    <td class="text-end">{{ port[4] }}</td>
+                    <td class="text-end">{{ port[2] }}</td>
+                    <td class="text-end">{{ port[1] }}</td>
+                </tr>
+
+
+                {% endfor %}
+
+
+
+        </tbody>
+
+    </table>
+
+        </main>
+
+{% endblock %}

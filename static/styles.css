@@ -1,0 +1,91 @@
+/* Size for brand */
+nav .navbar-brand
+{
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+
+body {
+      display: inline;
+      align-items: center;
+      justify-content: center;
+      height: 80vh;
+      margin: 0;
+      background: linear-gradient(to right, #4ca1af, #c4e0e5); /* Gradientowe tło */
+    }
+    .temperature-container {
+      text-align: center;
+      font-size: 24px;
+      color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      background: rgba(0, 0, 0, 0.5); /* Przezroczyste tło z ciemnym overlayem */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Cień dla konturu kafelka */
+    }
+    .temperature-history{
+        text-align: center;
+          font-size: 12px;
+          color: #fff;
+          padding: 20px;
+          background: rgba(0, 0, 0, 0.5); /* Przezroczyste tło z ciemnym overlayem */
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /* Cień dla konturu kafelka */
+    }
+
+    .temperature-container-old {
+      text-align: center;
+      font-size: 24px;
+      color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      background: rgba(55, 55, 0, 0.5); /* Przezroczyste tło z ciemnym overlayem */
+      box-shadow: 0 4px 8px rgba(44, 44, 0, 0.1); /* Cień dla konturu kafelka */
+    }
+
+    canvas{
+    margin: 0 auto;
+    }
+
+    .tile-title {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+     .tile-title-container {
+      border-bottom: 2px solid #fff; /* Linia oddzielająca tytuł od treści kafelka */
+      padding-bottom: 10px; /* Dodatkowy odstęp od dolnej krawędzi tytułu */
+    }
+
+     .tile-val {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+     .tile-divider {
+         position: absolute;
+         left: 50%;
+         transform: translateX(-50%);
+         width: 80%;
+         height: 2px;
+         background: linear-gradient(to right, rgba(255, 255, 255, 0), #fff, rgba(255, 255, 255, 0));
+         z-index: 0;
+     }
+

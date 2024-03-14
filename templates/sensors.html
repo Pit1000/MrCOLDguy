@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sensors
+{% endblock %}
+
+{% block main %}
+
+    <main class="container py-5 text-center">
+    <div class="align-center">
+
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th class="text-start">Sensor Name</th>
+                <th class="text-end">Sensor type</th>
+                <th class="text-end">Number of measurement</th>
+                <th class="text-end">First measurement</th>
+                <th class="text-end">The last measurement</th>
+
+            </tr>
+        </thead>
+       <tbody>
+
+                {% for sensor in sensors %}
+                    <tr>
+                    <td class="text-start">{{ sensor[0] }}</td>
+                        <td class="text-end">{{ sensor_type[sensor[0]][0][0] }}</td>
+                    <td class="text-end">{{ count[sensor[0]][0][0] }}</td>
+                    <td class="text-end">{{ first[sensor[0]][0][0] }}</td>
+                    <td class="text-end">{{ last[sensor[0]][0][0] }}</td>
+                    </tr>
+               {% endfor %}
+
+        </tbody>
+        <tfoot>
+            <tr>
+                <td class="border-0 fw-bold text-end" colspan="3">TOTAL NUMBER OF SENSORS</td>
+                <td class="border-0 w-bold text-end">{{ total }}</td>
+            </tr>
+        </tfoot>
+    </table>
+    </div>
+    </main>
+
+
+{% endblock %}
