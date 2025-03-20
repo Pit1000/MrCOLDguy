@@ -1,6 +1,7 @@
 # Dr COLDguy
 
-![MrCOLDguyb-ezgif com-speed](https://github.com/user-attachments/assets/0db8f106-1929-45c5-839a-01898eb9492c)
+
+![MrCOLDguygif](https://github.com/user-attachments/assets/bd4db941-49f9-487b-bf76-91dc57ed4dac)
 
 
 #### Description: The created project included programming the ESP8266 microcontroller in the C language. The microcontroller's task is to read the temperature and humidity from the DHT22 digital sensor and then send it via WIFI using JSON to the server created in Flask. Flask server deals with saving data in a sqlite3 DB. By implementing the chart.js library, basic data visualization is achivable. Another implementation is DataTables (CSS, JS) which were used to present DB records in an accessible way with the possibility of filtering or sorting. The following libraries were used to program the microcontroller used in the project: DHT.h - which is responsible for handling the DHT-22 digital temperature and humidity sensor. ArduinoJson.h - which is responsible for handling the saving of the sensor data in JSON format preparing it for shipping. ESP8266WiFi.h - which is responsible for establishing a connection to a WiFi wireless network. ESP8266HTTPClient.h - which is responsible for sending and handling HTML requests to the server.
