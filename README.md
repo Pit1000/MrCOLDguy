@@ -35,7 +35,7 @@ A complete solution integrating an ESP8266 microcontroller with a Flask-based se
 ## IMPLEMENTATION
 
 **Backend (Python/Flask):**
-- **Python** – backend programming language  
+- **Python** – version 3.11 
 - **Flask** – web framework  
 - **Flask-Session** – server-side session management  
 - **sqlite3** – database storing measurements and user info  
