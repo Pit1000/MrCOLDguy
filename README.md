@@ -2,7 +2,7 @@
 
 ---
 
-> This project demonstrate the capabilities of IoT (Internet of Things), combining microcontrollers with web applications, and for practical uses of both front-end and back-end technologies.<
+> This project demonstrate the capabilities of IoT (Internet of Things), combining microcontrollers with web applications, for practical uses of both front-end and back-end technologies.
 
 ---
 
