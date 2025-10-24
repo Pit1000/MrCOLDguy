@@ -2,7 +2,7 @@
 
 ---
 
-> ✨ This project demonstrates the capabilities of IoT (Internet of Things) 🌐, combining microcontrollers 🕹️ with web applications 💻, for practical uses of both front-end and back-end 🗄 technologies.
+> This project demonstrates the capabilities of IoT (Internet of Things), combining microcontrollers with web applications, for practical uses of both front-end and back-end technologies.
 
 ---
 
@@ -56,6 +56,7 @@ A complete solution integrating an ESP8266 microcontroller with a Flask-based se
 - **ESP8266** – microcontroller with built-in WiFi support  
 - **DHT22** – temperature and humidity sensor  
 - **DHT.h**, **ArduinoJson.h**, **ESP8266WiFi.h**, **ESP8266HTTPClient.h**
+
 
 
 
